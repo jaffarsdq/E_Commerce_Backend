@@ -24,10 +24,19 @@ const userRoute = require('./routes/user');
 const authRoute = require('./routes/auth');
 
 //middleware
+const allowedOrigins = ['https://e-commerce-react-app-rouge.vercel.app'];
+
 const corsOptions = {
-	origin: '*', // Replace with your React app's origin
-	credentials: true, // Enable credentials (cookies) in cross-origin requests
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // Allow credentials (cookies)
 };
+
 
 app.use(cors(corsOptions));
 
