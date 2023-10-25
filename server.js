@@ -24,7 +24,12 @@ const userRoute = require('./routes/user');
 const authRoute = require('./routes/auth');
 
 //middleware
-const allowedOrigins = ['https://e-commerce-react-app-rouge.vercel.app'];
+const allowedOrigins = [
+	'https://e-commerce-react-app-rouge.vercel.app',
+	'https://e-commerce-react-app-jaffarsdq.vercel.app', 
+	'https://e-commerce-react-app-git-main-jaffarsdq.vercel.app/', 
+	'https://e-commerce-react-bfrzjy14w-jaffarsdq.vercel.app/'
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
