@@ -25,11 +25,9 @@ const authRoute = require('./routes/auth');
 
 //middleware
 const corsOptions = {
-	origin: 'https://e-commerce-react-app-rouge.vercel.app/', // Replace with your React app's origin
+	origin: '*', // Replace with your React app's origin
 	credentials: true, // Enable credentials (cookies) in cross-origin requests
 };
-
-app.get('Origin');
 
 app.use(cors(corsOptions));
 
