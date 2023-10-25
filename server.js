@@ -25,10 +25,12 @@ const authRoute = require('./routes/auth');
 
 //middleware
 const corsOptions = {
-	origin: 'https://e-commerce-d1x1.onrender.com/', // Replace with your React app's origin
+	origin: 'http://localhost:5173/', // Replace with your React app's origin
 	credentials: true, // Enable credentials (cookies) in cross-origin requests
 };
-  
+
+app.get('Origin');
+
 app.use(cors(corsOptions));
 
 app.use(express.static(path.join(__dirname, '/public')));
