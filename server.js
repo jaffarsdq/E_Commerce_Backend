@@ -28,7 +28,8 @@ const allowedOrigins = [
 	'https://e-commerce-react-app-rouge.vercel.app',
 	'https://e-commerce-react-app-jaffarsdq.vercel.app', 
 	'https://e-commerce-react-app-git-main-jaffarsdq.vercel.app/', 
-	'https://e-commerce-react-bfrzjy14w-jaffarsdq.vercel.app/'
+	'https://e-commerce-react-bfrzjy14w-jaffarsdq.vercel.app/',
+	'https://e-commerce-react-coazi9ajm-jaffarsdq.vercel.app/'
 ];
 
 const corsOptions = {
