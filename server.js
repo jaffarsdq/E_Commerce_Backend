@@ -27,23 +27,23 @@ const authRoute = require('./routes/auth');
 const allowedOrigins = [
 	'https://e-commerce-react-app-nu.vercel.app',
 	'https://e-commerce-react-app-jaffarsdq.vercel.app',
-	'https://e-commerce-react-app-git-main-jaffarsdq.vercel.app'
-  ];
-  
-  const corsOptions = {
-	origin: (origin, callback) => {
-	  if (allowedOrigins.includes(origin) || !origin) {
-		// Allow requests with no origin (e.g., server-to-server requests)
-		callback(null, true);
-	  } else {
-		callback(new Error('Not allowed by CORS'));
-	  }
-	},
-	credentials: true, // Allow credentials (cookies)
-  };
-  
-  app.use(cors(corsOptions));
-  
+	'https://e-commerce-react-app-git-main-jaffarsdq.vercel.app',
+	'https://e-commerce-react-dh9p3348g-jaffarsdq.vercel.app'
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // Allow credentials (cookies)
+};
+
+
+app.use(cors(corsOptions));
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({ extended: true }));
