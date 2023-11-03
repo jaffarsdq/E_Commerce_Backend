@@ -25,7 +25,7 @@ const authRoute = require('./routes/auth');
 
 //middleware
 const corsOptions = {
-	origin: 'https://e-commerce-react-app-nu.vercel.app/', // Replace with your React app's origin
+	origin: 'https://https://e-commerce-backend-ivory.vercel.app', // Replace with your React app's origin
 	credentials: true, // Enable credentials (cookies) in cross-origin requests
 };
   
